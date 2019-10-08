@@ -6,7 +6,7 @@ import com.github.dockerjava.api.model.Ports;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.workshop.superheroes.fight.client.Hero;
 import io.quarkus.workshop.superheroes.fight.client.Villain;
-import io.restassured.mapper.TypeRef;
+import io.restassured.common.mapper.TypeRef;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -182,7 +182,7 @@ public class FightResourceTest {
             .post("/api/fights")
             .then()
             .statusCode(OK.getStatusCode())
-            .content(containsString("winner"), containsString("loser"))
+            .body(containsString("winner"), containsString("loser"))
             .extract().body().jsonPath().getString("id");
 
         assertNotNull(fightId);

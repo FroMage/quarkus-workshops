@@ -72,7 +72,7 @@
 
     <!-- tag::adocProperties[] -->
     <properties>
-        <quarkus.version>0.23.2</quarkus.version>
+        <quarkus.version>999-SNAPSHOT</quarkus.version>
         <surefire-plugin.version>2.22.0</surefire-plugin.version>
         <!-- tag::adocPropertiesTestcontainers[] -->
         <testcontainers.version>1.11.1</testcontainers.version>
